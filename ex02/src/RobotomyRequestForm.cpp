@@ -1,0 +1,63 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/18 21:57:49 by phwang            #+#    #+#             */
+/*   Updated: 2025/03/18 23:43:39 by phwang           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "RobotomyRequestForm.hpp"
+
+using std::cout;
+using std::endl;
+
+RobotomyRequestForm::RobotomyRequestForm() : AForm("NoName", 72, 45), _target("NoTarget")
+{}
+
+RobotomyRequestForm::RobotomyRequestForm(std::string formName) : AForm("RobotomyRequestForm", 72, 45),  _target(formName)
+{}
+
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &toCopy): AForm(toCopy.getName(), 72, 45), _target(toCopy._target)
+{
+	*this = toCopy;
+}
+
+RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &toCopy)
+{
+	if(this != &toCopy)
+	{
+
+	}
+	return *this;
+}
+
+RobotomyRequestForm::~RobotomyRequestForm()
+{}
+
+void RobotomyRequestForm::execute(Bureaucrat const & executor) const
+{
+	static int operation = 0;
+
+	if(!this->getIsSigned())
+	{
+		throw(NotSignedException());
+	}
+	if(executor.getGrade() > this->getGrade(EXEC_FLAG))
+	{
+		throw(TooLowToExecException());
+	}
+	cout << "* drilling noises *" << endl;
+	if(operation % 2 == 0)
+	{
+		cout << _target << " has been robotomized successfully zzzzz" << endl;
+	}
+	else
+	{
+		cout << "Lobotomy has failed" << endl;
+	}
+	operation++;
+}

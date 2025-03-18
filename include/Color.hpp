@@ -6,14 +6,13 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 11:05:44 by phwang            #+#    #+#             */
-/*   Updated: 2025/03/18 17:22:16 by phwang           ###   ########.fr       */
+/*   Updated: 2025/03/17 14:34:09 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-
 
 #define RESET "\033[0m"
 

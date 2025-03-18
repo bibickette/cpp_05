@@ -6,11 +6,11 @@
 #    By: phwang <phwang@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/11 13:17:33 by phwang            #+#    #+#              #
-#    Updated: 2025/03/18 18:21:17 by phwang           ###   ########.fr        #
+#    Updated: 2025/03/19 00:40:47 by phwang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = bureaucrat
+NAME = intern
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -I$(INCLUDE_DIR) -I$(COLOR_DIR)
@@ -21,6 +21,11 @@ SRC_DIR = src/
 OBJ_DIR = obj
 
 SRC_FILES = \
+	AForm.cpp \
+	Intern.cpp \
+	ShrubberyCreationForm.cpp \
+	PresidentialPardonForm.cpp \
+	RobotomyRequestForm.cpp \
 	Bureaucrat.cpp \
 	main.cpp
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILES))

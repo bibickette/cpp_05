@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 17:27:41 by phwang            #+#    #+#             */
-/*   Updated: 2025/03/18 21:37:29 by phwang           ###   ########.fr       */
+/*   Updated: 2025/03/19 01:17:54 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include "Form.hpp"
+#include "Color.hpp"
 
 #define GRADE_TOO_LOW_EXCEPTION "Bureaucrat grade is too low, has to be minimal 150"
 #define GRADE_TOO_HIGH_EXCEPTION "Bureaucrat grade is too high, has to be maximal 1"
@@ -37,6 +38,9 @@ public:
 	int getGrade() const;
 	std::string getName() const;
 
+	void incrementGrade();
+	void decrementGrade();
+	
 	void signForm(Form &form);
 
 	class GradeTooHighException : public std::exception

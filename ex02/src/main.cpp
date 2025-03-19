@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 17:04:59 by phwang            #+#    #+#             */
-/*   Updated: 2025/03/18 23:45:03 by phwang           ###   ########.fr       */
+/*   Updated: 2025/03/19 01:50:44 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,37 +21,36 @@ using std::endl;
 
 int main(void)
 {
-	try{
-		Bureaucrat a("Jean", 70);
-		Bureaucrat b("Michel", 150);
-		Bureaucrat c("Pouet", 20);
-		Bureaucrat d("The King", 5);
-
-		
-		ShrubberyCreationForm tree("big_tree");
-		b.signForm(tree);
-		c.signForm(tree);
-		c.executeForm(tree);
-		
-		RobotomyRequestForm zzz("big brain");
-		b.signForm(zzz);
-		a.signForm(zzz);
-		a.executeForm(zzz);
-		b.executeForm(zzz);
-		c.executeForm(zzz);
-
-		PresidentialPardonForm caca("Macron Demission");
-		b.signForm(caca);
-		a.signForm(caca);
-		c.signForm(caca);
-		c.executeForm(caca);
-		d.executeForm(caca);
-
-	}
-	catch (std::exception &e)
-	{
-		cout << RED << "Catch an exception : " << e.what() << RESET << endl;
-	}
+	Bureaucrat a("Michel", 150);
+	Bureaucrat b("Froggy", 2);
+	Bureaucrat c("Pouet", 70);
+	ShrubberyCreationForm shrub("big_tree");
+	RobotomyRequestForm robot("big brain");
+	PresidentialPardonForm pres("La grosse betise");
+	cout << a;
+	cout << b;
+	cout << c;
+	cout << shrub;
+	cout << robot;
+	cout << pres;
+	cout << "TEST 0 --------------------------" << endl;
+	b.signForm(shrub);
+	c.signForm(shrub);
+	c.executeForm(shrub);
+	b.executeForm(shrub);
+	
+	cout << endl << endl << "TEST 1 --------------------------" << endl;
+	b.signForm(robot);
+	a.signForm(robot);
+	a.executeForm(robot);
+	b.executeForm(robot);
+	c.executeForm(robot);
+	
+	cout << endl << endl << "TEST 2 --------------------------" << endl;
+	b.signForm(pres);
+	a.signForm(pres);
+	c.signForm(pres);
+	b.executeForm(pres);
 	
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 19:31:00 by phwang            #+#    #+#             */
-/*   Updated: 2025/03/18 22:27:31 by phwang           ###   ########.fr       */
+/*   Updated: 2025/03/19 01:40:19 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,12 @@ using std::cout;
 using std::endl;
 
 AForm::AForm() : _name("Anonymous"), _isSigned(false), _gradeForSign(0), _gradeForExec(0)
-{}
+{
+	cout << YELLOW << "Default AForm constructor called" << RESET << endl;
+}
 AForm::AForm(std::string name, int gradeSign, int gradeExec) : _name(name), _isSigned(false), _gradeForSign(gradeSign), _gradeForExec(gradeExec)
 {
+	cout << YELLOW << "AForm Parameter constructor called" << RESET << endl;
 	if(gradeSign < 1 || gradeExec < 1)
 	{
 		throw(AForm::GradeTooHighException());
@@ -30,10 +33,14 @@ AForm::AForm(std::string name, int gradeSign, int gradeExec) : _name(name), _isS
 }
 
 AForm::AForm(const AForm &toCopy) : _name(toCopy._name), _isSigned(toCopy._isSigned), _gradeForSign(toCopy._gradeForSign), _gradeForExec(toCopy._gradeForExec)
-{ }
+{
+	cout << YELLOW << "AForm Copy constructor called" << RESET << endl;
+	*this = toCopy;
+}
 
 AForm &AForm::operator=(const AForm &toCopy)
 {
+	cout << YELLOW << "Affectation AForm constructor called" << RESET << endl;
 	if(this != &toCopy)
 	{
 		_isSigned = toCopy._isSigned;
@@ -42,7 +49,9 @@ AForm &AForm::operator=(const AForm &toCopy)
 }
 
 AForm::~AForm()
-{}
+{
+	cout << YELLOW << "AForm Destructor called" << RESET << endl;
+}
 
 std::string AForm::getName() const
 {

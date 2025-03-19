@@ -6,7 +6,7 @@
 #    By: phwang <phwang@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/11 13:17:33 by phwang            #+#    #+#              #
-#    Updated: 2025/03/19 00:41:08 by phwang           ###   ########.fr        #
+#    Updated: 2025/03/19 01:12:20 by phwang           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,8 @@ TOTAL_SRCS := $(words $(MANDATORY_SRCS))
 COMPILED_SRCS := 0
 #COLOR SET
 COLOR_RESET = \e[0m
-COLOR_GREEN = \e[0;35m
-COLOR_BLUE = \e[0;35m
+COLOR_GREEN = \e[36m
+COLOR_BLUE = \e[36m
 
 
 all: $(NAME)

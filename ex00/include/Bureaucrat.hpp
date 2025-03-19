@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 17:27:41 by phwang            #+#    #+#             */
-/*   Updated: 2025/03/18 21:09:59 by phwang           ###   ########.fr       */
+/*   Updated: 2025/03/19 01:13:44 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
+#include "Color.hpp"
 class Bureaucrat
 {
 private:
@@ -29,6 +30,9 @@ public:
 
 	int getGrade() const;
 	std::string getName() const;
+
+	void incrementGrade();
+	void decrementGrade();
 	
 	class GradeTooHighException : public std::exception
 	{

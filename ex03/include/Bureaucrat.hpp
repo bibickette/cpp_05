@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 17:27:41 by phwang            #+#    #+#             */
-/*   Updated: 2025/03/18 23:37:16 by phwang           ###   ########.fr       */
+/*   Updated: 2025/03/19 01:06:46 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,9 @@ public:
 	int getGrade() const;
 	std::string getName() const;
 
+	void incrementGrade();
+	void decrementGrade();
+	
 	void signForm(AForm &form);
 	void executeForm(AForm const & form);
 

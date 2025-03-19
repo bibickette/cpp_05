@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 00:01:12 by phwang            #+#    #+#             */
-/*   Updated: 2025/03/19 00:40:34 by phwang           ###   ########.fr       */
+/*   Updated: 2025/03/19 01:30:30 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,19 @@ using std::cout;
 using std::endl;
 
 Intern::Intern()
-{}
+{
+	cout << BLUE << "Default Intern constructor called" << RESET << endl;
+}
 
 Intern::Intern(const Intern &toCopy)
 {
+	cout << BLUE << "Intern Copy constructor called" << RESET << endl;
 	*this = toCopy;
 }
 
 Intern &Intern::operator=(const Intern &toCopy)
 {
+	cout << BLUE << "Affectation operator Intern constructor called" << RESET << endl;
 	if(this != &toCopy)
 	{
 
@@ -33,7 +37,9 @@ Intern &Intern::operator=(const Intern &toCopy)
 }
 
 Intern::~Intern()
-{}
+{
+	cout << BLUE << "Intern destructor called" << RESET << endl;
+}
 
 AForm *Intern::makeShrub(std::string target)
 {

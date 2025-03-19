@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 17:04:59 by phwang            #+#    #+#             */
-/*   Updated: 2025/03/19 01:58:08 by phwang           ###   ########.fr       */
+/*   Updated: 2025/03/19 12:55:46 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int main(void)
 	cout << "TEST 0 --------------------------" << endl;
 	try{
 		AForm *form = intern.makeForm("lala", "michel");
+		cout << *form;
 	}
 	catch (std::exception &e)
 	{
@@ -57,8 +58,10 @@ int main(void)
 		AForm *form = intern.makeForm("ShrubberyCreationForm", "jesaispo");
 		cout << *form;
 		c.signForm(*form);
+		b.signForm(*form);
 		cout << *form;
 		c.executeForm(*form);
+		b.executeForm(*form);
 		delete form;
 	}
 	catch (std::exception &e)

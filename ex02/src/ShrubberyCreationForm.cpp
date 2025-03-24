@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 21:57:36 by phwang            #+#    #+#             */
-/*   Updated: 2025/03/19 13:03:31 by phwang           ###   ########.fr       */
+/*   Updated: 2025/03/24 15:05:56 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 using std::cout;
 using std::endl;
 
-ShrubberyCreationForm::ShrubberyCreationForm() : AForm("NoName", 25, 5), _target("NoTarget")
+ShrubberyCreationForm::ShrubberyCreationForm() : AForm("NoName", 145, 137), _target("NoTarget")
 {
 	cout << GREEN << "Default ShrubberyCreationForm constructor called" << RESET << endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string formName) : AForm("ShrubberyCreationForm", 25, 5),  _target(formName)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string formName) : AForm("ShrubberyCreationForm", 145, 137),  _target(formName)
 {
 	cout << GREEN << "ShrubberyCreationForm Parameter constructor called" << RESET << endl;
 
 }
 
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &toCopy): AForm(toCopy.getName(), 25, 5), _target(toCopy._target)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &toCopy): AForm(toCopy.getName(), 145, 137), _target(toCopy._target)
 {
 	cout << GREEN << "ShrubberyCreationForm Copy constructor called" << RESET << endl;
 	*this = toCopy;

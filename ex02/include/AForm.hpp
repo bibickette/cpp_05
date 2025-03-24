@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:23:19 by phwang            #+#    #+#             */
-/*   Updated: 2025/03/18 22:28:02 by phwang           ###   ########.fr       */
+/*   Updated: 2025/03/24 15:06:55 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 #define GRADE_TOO_LOW_SIGN_EXCEPTION "Bureaucrate grade is too low to sign the form"
 #define GRADE_TOO_LOW_EXEC_EXCEPTION "Bureaucrate grade is too low to execute the form"
 #define GRADE_FORM_TOO_HIGH_EXCEPTION "Form grade is too high, has to be maximal 1"
-#define GRADE_FORM_TOO_LOW_EXCEPTION "Form grade is too high, has to be maximal 1"
+#define GRADE_FORM_TOO_LOW_EXCEPTION "Form grade is too low, has to be minimal 150"
 
 #define SIGN_FLAG 1
 #define EXEC_FLAG 2

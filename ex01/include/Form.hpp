@@ -6,7 +6,7 @@
 /*   By: phwang <phwang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:23:19 by phwang            #+#    #+#             */
-/*   Updated: 2025/03/18 21:37:54 by phwang           ###   ########.fr       */
+/*   Updated: 2025/03/24 15:07:01 by phwang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 #define ALREADY_SIGNED_EXCEPTION "this form is already signed"
 #define GRADE_TOO_LOW_SIGN_EXCEPTION "Bureaucrate grade is too low to sign the form"
 #define GRADE_FORM_TOO_HIGH_EXCEPTION "Form grade is too high, has to be maximal 1"
-#define GRADE_FORM_TOO_LOW_EXCEPTION "Form grade is too high, has to be maximal 1"
+#define GRADE_FORM_TOO_LOW_EXCEPTION "Form grade is too low, has to be minimal 150"
 
 class Bureaucrat;
 
